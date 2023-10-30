@@ -1,13 +1,6 @@
 describe ('Login Test', function () {
     // Test Case
-    it ('Login Page', function(){
-         // test step for URL launching
-      
-         cy.visit("https://retailsappqa.azurewebsites.net");      
-      
-    })
-
-it.only('the ', function(){
+it('the ', function(){
     cy.visit("https://retailsappqa.azurewebsites.net");
     cy.viewport('macbook-13')
     cy.visit("https://retailsappqa.azurewebsites.net");
@@ -23,6 +16,7 @@ it.only('the ', function(){
 
     cy.contains('Prices').click()
     cy.contains('Inventory').click()
+    cy.wait(2000)
     cy.contains('History').click()
     cy.wait(2000)
     // to scroll down 
@@ -31,6 +25,14 @@ it.only('the ', function(){
 
     // scroll to bottom
     cy.scrollTo('bottom') // Scroll 'sidebar' to its bottom
+    cy.wait(2000)
+    // pages
+    cy.get('.mat-select-arrow').click()
+    // cy.get('#mat-option-15 > .mat-option-text').click()
+    cy.get('#mat-option-11').click()
+    // cy.get('.row > .d-flex > :nth-child(2)').type('100').click()
+    cy.scrollTo('top')
+    
     cy.wait(5000)
 
       cy.contains('Estimation').click()
@@ -56,13 +58,13 @@ it.only('the ', function(){
     cy.get(':nth-child(1) > .chosen-select > .ng-select-container').type('Staff{enter}') 
     // aadhar number
     cy.get(':nth-child(3) > :nth-child(2) > .form-control').click().type('8484848451')
+    
+    cy.scrollTo(0, 500) // Scroll the window 500px down
+      cy.scrollTo('bottom') // Scroll 'sidebar' to its bottom
+
     // Calendar job Start Date
     cy.get(':nth-child(3) > .mt-5 > .form-control').type('20/05/1990')
-
-    cy.scrollTo(0, 500) // Scroll the window 500px down
-      cy.get('.sidebar').scrollTo('bottom') // Scroll 'sidebar' to its bottom
-
-    
-    })
+   
+})
 
 })

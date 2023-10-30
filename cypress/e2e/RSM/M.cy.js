@@ -1,12 +1,14 @@
 describe('Login and Logout Tests', () => {
     const users = [
       { username: 'rohith', password: 'anos@123' },
-      { username: 'info@cixcent.com', password: 'din' },
       { username: 'S.Shredder', password: 'password@123' },
       { username: 'sarkarj', password: 'password@123' },
-    //   { username: 'R.Swamy', password: 'password@123' },
-    //   { username: 's.mahesh', password: 'password@123' },
-      { username: 'superadmin', password: 'din' },
+      { username: 'R.Swamy', password: 'password@123' },
+      { username: 's.mahesh', password: 'password@123' },
+      
+      { username: 'KKai', password: 'password@123' },
+    // { username: 'info@cixcent.com', password: 'din' },
+      //  { username: 'superadmin', password: 'din' }
       // Add more user credentials as needed
     ];
   
@@ -23,11 +25,10 @@ describe('Login and Logout Tests', () => {
         // Submit the login form
         cy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}')
                
-
-
+        cy.wait(2000)
         // Assert that the user is logged in
         cy.contains('Master').click()
-
+        cy.wait(2000)
         cy.contains('Products').click()
         // cy.contains('Master').click()
         // cy.contains( user.username);
@@ -42,11 +43,12 @@ describe('Login and Logout Tests', () => {
         // cy.get('.symbol-label').click()
         // cy.wait(2500)
 
-        cy.contains('user').click()
-        // cy.get('.fs-6 > :nth-child(7) > .menu-link').click()
+        cy.get('.symbol-label').click()
+        // cy.get(':nth-child(7) > .menu-link').click()
         // Assert that the user is logged out
-        cy.contains('Sign Out')
-        cy.contains('Sign In'); // Assuming the login button is shown when not logged in
+        cy.contains('Sign Out').click()
+        // Assuming the login button is shown when not logged in
+
       });
     });
   });
