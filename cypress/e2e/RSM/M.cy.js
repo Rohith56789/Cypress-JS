@@ -1,6 +1,6 @@
 describe('Login and Logout Tests', () => {
     const users = [
-      { username: 'rohith', password: 'anos@123' },
+      { username: 'rohith', password: 'rohith' },
       { username: 'S.Shredder', password: 'password@123' },
       { username: 'sarkarj', password: 'password@123' },
       { username: 'R.Swamy', password: 'password@123' },
@@ -27,23 +27,11 @@ describe('Login and Logout Tests', () => {
                
         cy.wait(2000)
         // Assert that the user is logged in
-        cy.contains('Master').click()
-        cy.wait(2000)
-        cy.contains('Products').click()
-        // cy.contains('Master').click()
-        // cy.contains( user.username);
-        // cy.wait(2500)
-  
-        // Perform some actions specific to the logged-in user
-        // For example, navigate to different pages, perform tasks, etc.
-  
-        // Logout
-        // cy.get('#kt_header_user_menu_toggle')
-        // cy.wait(2500)
-        // cy.get('.symbol-label').click()
-        // cy.wait(2500)
 
         cy.get('.symbol-label').click()
+
+        // if it doesn't work
+        cy.go('forward')
         // cy.get(':nth-child(7) > .menu-link').click()
         // Assert that the user is logged out
         cy.contains('Sign Out').click()
