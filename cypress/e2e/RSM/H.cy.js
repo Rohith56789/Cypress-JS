@@ -6,7 +6,7 @@ describe ('Login Test', function () {
         cy.get(':nth-child(2) > .form-control')
           .type('rohith')
         cy.get(':nth-child(3) > .form-control')
-        .type('rohith')
+        .type('anos@123')
         cy.get('#kt_login_signin_form > :nth-child(4)')
         .type('{enter}')
    

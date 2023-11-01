@@ -1,6 +1,6 @@
 describe('Login and Logout Tests', () => {
     const users = [
-      { username: 'rohith', password: 'rohith' },
+      { username: 'rohith', password: 'anos@123' },
       { username: 'S.Shredder', password: 'password@123' },
       { username: 'sarkarj', password: 'password@123' },
       { username: 'R.Swamy', password: 'password@123' },

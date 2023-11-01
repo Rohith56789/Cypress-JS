@@ -16,7 +16,7 @@ it('the ', function(){
    
    
   
-     cy.contains('Master').click()
+    cy.contains('Master').click()
     cy.contains('Products').click()
 
     cy.contains('Prices').click()
