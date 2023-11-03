@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-11-03T11:24:35.786Z",
+    "end": "2023-11-03T11:24:48.927Z",
+    "duration": 13141,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d69e34d7-cbd7-4279-948e-3232a53e11f1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\RSM\\NochngeProduct.cy.js",
+      "file": "cypress\\e2e\\RSM\\NochngeProduct.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f2119e78-5971-431f-a69c-c98f79af15f8",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "the ",
+              "fullTitle": "Login Test the ",
+              "timedOut": null,
+              "duration": 11249,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\RSM\\\\NochngeProduct.cy.js\\\\Login Test -- the (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.visit(\"https://retailsappqa.azurewebsites.net\");\ncy.viewport('macbook-13');\ncy.visit(\"https://retailsappqa.azurewebsites.net\");\ncy.get(':nth-child(2) > .form-control').type('rohith');\ncy.get(':nth-child(3) > .form-control').type('anos@123');\ncy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}');\n//  cy.get('#\\#kt_header_menu > :nth-child(2) > .menu-link')\n//  cy.get('#\\#kt_header_menu > :nth-child(2) > .menu-link > .menu-title')\ncy.contains('Master').click();\ncy.contains('Products').click();\n// works better for Stones\ncy.contains('Stones').click();\ncy.get('.card-toolbar > .d-flex > .btn').click();\ncy.get('app-add-edit-stone > :nth-child(2) > form.ng-pristine > .card > .card-body > .row > .col-md-12 > .form-control').type('Citrine');\n// cy.get('app-add-edit-stone > :nth-child(2) > form.ng-pristine > .card > .card-body > .row > :nth-child(2) > .form-control').type(260)\ncy.get(':nth-child(4) > .form-control').type('100');\ncy.get('form.ng-dirty > .card > .card-body > .row > .col-md-auto > .btn').click();\ncy.get('.btn-close').click();\ncy.contains('Products').click();\n// edit a product\ncy.get(':nth-child(1) > .cdk-column-actions > .me-2 > a > .material-symbols-rounded').click();\ncy.get('form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-control').clear().type('G- Rings ');\ncy.get('form.ng-valid > :nth-child(1) > :nth-child(2) > .chosen-select > .ng-select-container').clear().type('Gold{Enter}');\n// cy.go('forward')\ncy.get(':nth-child(2) > :nth-child(1) > .chosen-select > .ng-select-container').click().clear().type('Rings{enter}');\ncy.get(':nth-child(2) > :nth-child(1) > .chosen-select > .ng-select-container > .ng-arrow-wrapper').click();\ncy.get('.col-lg-6.ng-star-inserted > .form-control').clear().type('10');\ncy.go('forward');\n// cy.get('.mt-3.ng-star-inserted > :nth-child(1) > .chosen-select > .ng-select-container').click()\n// cy.get('.mt-3.ng-star-inserted > :nth-child(1) > .chosen-select > .ng-select-container > .ng-arrow-wrapper').select('cm').click()\ncy.get('.ng-star-inserted > .material-symbols-rounded').click();\n// cy.get('.col-md-8 > .form-control').click().type('mm')\ncy.get('.mt-3.ng-star-inserted > :nth-child(1) > .chosen-select > .ng-select-container');\n// to get the size\ncy.get('.mt-8 > .col-md-12 > .table-responsive > .table > tbody > :nth-child(2) > :nth-child(1)').click();\n// save button\ncy.get('.col-md-4 > .btn').click();\n// pen button\ncy.get(':nth-child(1) > :nth-child(2) > [style=\"cursor: pointer; margin-right: 5px;\"]').click();\n// save button\ncy.get('.col-md-4 > .btn').click();\n// x button to close pop up\ncy.get('.col-md-2 > .d-grid > .btn-close').click();\n// HUID -\ncy.get(':nth-child(6) > :nth-child(2) > .form-check-input').click();\n// HUID -\ncy.get(':nth-child(6) > :nth-child(3) > .form-check-input');\n// Fixed \ncy.get('.col-lg-2 > .form-check-input');\n// Weight\ncy.get('.col-lg-5 > .form-check-input').click();\n// Input Field\ncy.get(':nth-child(9) > :nth-child(1) > .form-control').clear().type('500').click();\n// + Range\ncy.get(':nth-child(9) > :nth-child(2) > .btn').click();\n// to enter range from \ncy.get(':nth-child(3) > :nth-child(1) > .row > :nth-child(1) > .form-control').clear().type('50');\n// to enter range - to\ncy.get(':nth-child(3) > :nth-child(1) > .row > .col-lg-3 > .form-control').clear().type('100');\n// to enter changes per gram\ncy.get(':nth-child(1) > .row > :nth-child(3) > .form-control').clear().type('1200');\ncy.get('.col-xl-1 > .btn-close').click();\n// to save the product\ncy.get('.d-grid > .btn').click();\n// x button to close entire product pop up\n// cy.contains('.btn-close').click()\ncy.contains('Prices').click();\ncy.contains('Inventory').click();\ncy.contains('Estimation').click();\ncy.contains('More').click();\ncy.contains('Staff').click();\ncy.contains('Add Staff').click();\ncy.get(':nth-child(1) > :nth-child(1) > .form-control').click().type('B');\ncy.get('.ng-invalid.ng-dirty > .card > .card-body > :nth-child(1) > :nth-child(2) > .form-control').click().type('Anandi');\n// username\ncy.get(':nth-child(1) > :nth-child(3) > .form-control').click().type('BAnandi');\ncy.get(':nth-child(4) > .form-control').click().type('1248464865');\ncy.get(':nth-child(5) > .form-control').click().type('anandi@gmail.com');\n// address\ncy.get('.col-lg-12 > .input-group > .form-control').type('Tilak Nagar');\n// Area\ncy.get(':nth-child(2) > :nth-child(3) > .form-control').type('Lake');\n// select City\ncy.get(':nth-child(4) > .chosen-select > .ng-select-container').type('Mumbai{enter}');\n// role --  needed click()\ncy.get(':nth-child(1) > .chosen-select > .ng-select-container').type('Staff{enter}');\n// aadhar number\ncy.get(':nth-child(3) > :nth-child(2) > .form-control').click().type('8484848451');\n// job Start Date\n// cy.get(':nth-child(3) > .mt-5 > .form-control').type('20/05/1990')\n// cy.scrollTo(0, 500) // Scroll the window 500px down\n//   cy.get('.sidebar').scrollTo('bottom') // Scroll 'sidebar' to its bottom\n//   cy.get('.mb-4 > .col-lg-6 > .form-control').click().type('10/01/2023')\n//   cy.get('#btnSubmit').click()",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `form.ng-valid > :nth-child(1) > :nth-child(2) > .chosen-select > .ng-select-container`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `form.ng-valid > :nth-child(1) > :nth-child(2) > .chosen-select > .ng-select-container`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/RSM/NochngeProduct.cy.js:38:7)",
+                "diff": null
+              },
+              "uuid": "7e403e71-0845-4aba-a20e-c375ea3d1cfa",
+              "parentUUID": "f2119e78-5971-431f-a69c-c98f79af15f8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7e403e71-0845-4aba-a20e-c375ea3d1cfa"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11249,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

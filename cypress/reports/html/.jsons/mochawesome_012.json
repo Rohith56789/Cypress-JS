@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-11-03T11:25:26.222Z",
+    "end": "2023-11-03T11:25:34.623Z",
+    "duration": 8401,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c4aa63db-2f22-43e4-88a5-0e582c77114f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\RSM\\re.cy.js",
+      "file": "cypress\\e2e\\RSM\\re.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0f112007-b6e8-41d4-950e-f7e4eaea4912",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign In Form",
+              "fullTitle": "Login Test Sign In Form",
+              "timedOut": null,
+              "duration": 6531,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\RSM\\\\re.cy.js\\\\Login Test -- Sign In Form (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.viewport('macbook-13');\ncy.visit(\"https://retailsappqa.azurewebsites.net\");\ncy.get('[id=\"input- \"]').click().type('rohith{enter}');\ncy.get('[id=\"input- \"]').click().type('anos@123{enter}');\n// cy.contains('input:pasword').click().type('rohith{enter}')\ncy.get('type:Submit').click();\n// cy.get('#username').type('rohith{enter}')\n// cy.get('#password').type('anos@123{enter}')",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=\"input- \"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=\"input- \"]`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/RSM/re.cy.js:8:7)",
+                "diff": null
+              },
+              "uuid": "2dd3440a-86c5-4042-a7b3-1081c05ae42a",
+              "parentUUID": "0f112007-b6e8-41d4-950e-f7e4eaea4912",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2dd3440a-86c5-4042-a7b3-1081c05ae42a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6531,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

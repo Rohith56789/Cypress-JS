@@ -1,0 +1,217 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 2,
+    "pending": 0,
+    "failures": 4,
+    "start": "2023-11-03T11:23:08.608Z",
+    "end": "2023-11-03T11:23:56.230Z",
+    "duration": 47622,
+    "testsRegistered": 6,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "863d7c18-b3af-4850-a4c8-dda14f9c7753",
+      "title": "",
+      "fullFile": "cypress\\e2e\\RSM\\M.cy.js",
+      "file": "cypress\\e2e\\RSM\\M.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d20630d-6e03-47a2-ba01-968da797ee07",
+          "title": "Login and Logout Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Logs in and out as rohith",
+              "fullTitle": "Login and Logout Tests Logs in and out as rohith",
+              "timedOut": null,
+              "duration": 7474,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Visit the login page\ncy.visit('https://retailsappqa.azurewebsites.net');\n// Enter the username and password\ncy.get(':nth-child(2) > .form-control').type(user.username);\ncy.get(':nth-child(3) > .form-control').type(user.password);\n// Submit the login form\ncy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}');\ncy.wait(2000);\n// Assert that the user is logged in\ncy.get('.symbol-label').click();\n// if it doesn't work\ncy.go('forward');\n// cy.get(':nth-child(7) > .menu-link').click()\n// Assert that the user is logged out\ncy.contains('Sign Out').click();\n// Assuming the login button is shown when not logged in",
+              "err": {},
+              "uuid": "52b245c7-b4e9-44a4-a49d-13bc2a63bb8a",
+              "parentUUID": "2d20630d-6e03-47a2-ba01-968da797ee07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logs in and out as S.Shredder",
+              "fullTitle": "Login and Logout Tests Logs in and out as S.Shredder",
+              "timedOut": null,
+              "duration": 8173,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\RSM\\\\M.cy.js\\\\Login and Logout Tests -- Logs in and out as S.Shredder (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Visit the login page\ncy.visit('https://retailsappqa.azurewebsites.net');\n// Enter the username and password\ncy.get(':nth-child(2) > .form-control').type(user.username);\ncy.get(':nth-child(3) > .form-control').type(user.password);\n// Submit the login form\ncy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}');\ncy.wait(2000);\n// Assert that the user is logged in\ncy.get('.symbol-label').click();\n// if it doesn't work\ncy.go('forward');\n// cy.get(':nth-child(7) > .menu-link').click()\n// Assert that the user is logged out\ncy.contains('Sign Out').click();\n// Assuming the login button is shown when not logged in",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.symbol-label`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.symbol-label`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/RSM/M.cy.js:31:11)",
+                "diff": null
+              },
+              "uuid": "9c0043fb-85ad-4408-8a95-46fe68a6ecbd",
+              "parentUUID": "2d20630d-6e03-47a2-ba01-968da797ee07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logs in and out as sarkarj",
+              "fullTitle": "Login and Logout Tests Logs in and out as sarkarj",
+              "timedOut": null,
+              "duration": 4975,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Visit the login page\ncy.visit('https://retailsappqa.azurewebsites.net');\n// Enter the username and password\ncy.get(':nth-child(2) > .form-control').type(user.username);\ncy.get(':nth-child(3) > .form-control').type(user.password);\n// Submit the login form\ncy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}');\ncy.wait(2000);\n// Assert that the user is logged in\ncy.get('.symbol-label').click();\n// if it doesn't work\ncy.go('forward');\n// cy.get(':nth-child(7) > .menu-link').click()\n// Assert that the user is logged out\ncy.contains('Sign Out').click();\n// Assuming the login button is shown when not logged in",
+              "err": {},
+              "uuid": "6e8e155e-233c-44e6-96b6-40b278a27ed1",
+              "parentUUID": "2d20630d-6e03-47a2-ba01-968da797ee07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logs in and out as R.Swamy",
+              "fullTitle": "Login and Logout Tests Logs in and out as R.Swamy",
+              "timedOut": null,
+              "duration": 8054,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\RSM\\\\M.cy.js\\\\Login and Logout Tests -- Logs in and out as R.Swamy (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Visit the login page\ncy.visit('https://retailsappqa.azurewebsites.net');\n// Enter the username and password\ncy.get(':nth-child(2) > .form-control').type(user.username);\ncy.get(':nth-child(3) > .form-control').type(user.password);\n// Submit the login form\ncy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}');\ncy.wait(2000);\n// Assert that the user is logged in\ncy.get('.symbol-label').click();\n// if it doesn't work\ncy.go('forward');\n// cy.get(':nth-child(7) > .menu-link').click()\n// Assert that the user is logged out\ncy.contains('Sign Out').click();\n// Assuming the login button is shown when not logged in",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.symbol-label`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.symbol-label`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/RSM/M.cy.js:31:11)",
+                "diff": null
+              },
+              "uuid": "a76a5bf6-c0c0-4bef-9b56-c056ce706200",
+              "parentUUID": "2d20630d-6e03-47a2-ba01-968da797ee07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logs in and out as s.mahesh",
+              "fullTitle": "Login and Logout Tests Logs in and out as s.mahesh",
+              "timedOut": null,
+              "duration": 8089,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\RSM\\\\M.cy.js\\\\Login and Logout Tests -- Logs in and out as s.mahesh (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Visit the login page\ncy.visit('https://retailsappqa.azurewebsites.net');\n// Enter the username and password\ncy.get(':nth-child(2) > .form-control').type(user.username);\ncy.get(':nth-child(3) > .form-control').type(user.password);\n// Submit the login form\ncy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}');\ncy.wait(2000);\n// Assert that the user is logged in\ncy.get('.symbol-label').click();\n// if it doesn't work\ncy.go('forward');\n// cy.get(':nth-child(7) > .menu-link').click()\n// Assert that the user is logged out\ncy.contains('Sign Out').click();\n// Assuming the login button is shown when not logged in",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.symbol-label`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.symbol-label`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/RSM/M.cy.js:31:11)",
+                "diff": null
+              },
+              "uuid": "7445098d-e5f6-4b09-96aa-d779602e0288",
+              "parentUUID": "2d20630d-6e03-47a2-ba01-968da797ee07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logs in and out as KKai",
+              "fullTitle": "Login and Logout Tests Logs in and out as KKai",
+              "timedOut": null,
+              "duration": 8202,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\RSM\\\\M.cy.js\\\\Login and Logout Tests -- Logs in and out as KKai (failed).png\"\n    ]\n  ]\n}",
+              "code": "// Visit the login page\ncy.visit('https://retailsappqa.azurewebsites.net');\n// Enter the username and password\ncy.get(':nth-child(2) > .form-control').type(user.username);\ncy.get(':nth-child(3) > .form-control').type(user.password);\n// Submit the login form\ncy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}');\ncy.wait(2000);\n// Assert that the user is logged in\ncy.get('.symbol-label').click();\n// if it doesn't work\ncy.go('forward');\n// cy.get(':nth-child(7) > .menu-link').click()\n// Assert that the user is logged out\ncy.contains('Sign Out').click();\n// Assuming the login button is shown when not logged in",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.symbol-label`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.symbol-label`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/RSM/M.cy.js:31:11)",
+                "diff": null
+              },
+              "uuid": "cb800711-5866-4508-afc5-462c84b7893c",
+              "parentUUID": "2d20630d-6e03-47a2-ba01-968da797ee07",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "52b245c7-b4e9-44a4-a49d-13bc2a63bb8a",
+            "6e8e155e-233c-44e6-96b6-40b278a27ed1"
+          ],
+          "failures": [
+            "9c0043fb-85ad-4408-8a95-46fe68a6ecbd",
+            "a76a5bf6-c0c0-4bef-9b56-c056ce706200",
+            "7445098d-e5f6-4b09-96aa-d779602e0288",
+            "cb800711-5866-4508-afc5-462c84b7893c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 44967,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-11-03T11:22:17.593Z",
+    "end": "2023-11-03T11:22:37.746Z",
+    "duration": 20153,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ff017b9b-bdfd-4718-bf64-618176c77583",
+      "title": "",
+      "fullFile": "cypress\\e2e\\RSM\\Inventory(weight).cy.js",
+      "file": "cypress\\e2e\\RSM\\Inventory(weight).cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "748468ec-8e67-42f9-82ec-b13057142e5c",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Login Test Login",
+              "timedOut": null,
+              "duration": 17864,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\RSM\\\\Inventory(weight).cy.js\\\\Login Test -- Login (failed).png\"\n    ]\n  ]\n}",
+              "code": "// test step for URL launching\ncy.viewport('macbook-15');\ncy.visit(\"https://retailsappqa.azurewebsites.net\");\ncy.get(':nth-child(2) > .form-control').type('rohith');\ncy.get(':nth-child(3) > .form-control').type('anos@123');\ncy.get('#kt_login_signin_form > :nth-child(4)').type('{enter}');\ncy.contains('Master').click();\ncy.contains('Products').click();\ncy.wait(10);\n//  Navigate on to Inventory\ncy.contains('Inventory').click();\ncy.wait(5000);\ncy.contains('Stock Summary').click();\n// cy.wait(60)\ncy.contains('History').click();\n// navigates to Wgt\ncy.get('.btn-group > :nth-child(1)').click();\ncy.wait(100);\ncy.get(':nth-child(2) > .chosen-select > .ng-select-container > .ng-value-container > .ng-input').click();\ncy.get(':nth-child(2) > .chosen-select > .ng-select-container > .ng-arrow-wrapper').type('Gold');\ncy.get(':nth-child(3) > .chosen-select > .ng-select-container').click().type('carat{enter}');\ncy.get(':nth-child(3) > .chosen-select > .ng-select-container > .ng-arrow-wrapper').click();\ncy.get('#btnSearch').click();\ncy.scrollTo(0, 500); // Scroll the window 500px down\ncy.get('.sidebar').scrollTo('bottom'); // Scroll 'sidebar' to its bottom\ncy.get('.mat-paginator-container');\ncy.get('.mat-form-field-infix');\ncy.get('.mat-select-arrow').click();\n// cy.get('#mat-option-13 > .mat-option-text')\ncy.get('#mat-option-15 > .mat-option-text').click();\n// cy.get('.btn-group > :nth-child(2)').select(2)\n// cy.get(':nth-child(1) > .cdk-column-actions > .row > .print-icon > .material-symbols-rounded').click()\n// cy.go('back')\n// cy.contains('Master')\n// convert to pdf \ncy.get('.row > .d-flex > :nth-child(2)').click().type('100').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.sidebar`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.sidebar`, but never found it.\n    at Context.eval (https://retailsappqa.azurewebsites.net/__cypress/tests?p=cypress\\e2e\\RSM\\Inventoryweight.cy.js:42:8)",
+                "diff": null
+              },
+              "uuid": "a4085b31-a532-469f-9d1c-27ce2011b459",
+              "parentUUID": "748468ec-8e67-42f9-82ec-b13057142e5c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a4085b31-a532-469f-9d1c-27ce2011b459"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17864,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
